@@ -1,5 +1,5 @@
 module "common" {
- source = "git::https://github.com/mura651/remote-module-test.git//env/common"
+  source = "git::https://github.com/mura651/remote-module-test.git//env/common"
 }
 
 #vpc
@@ -15,6 +15,6 @@ module "my_vpc" {
 #InternetGateway
 module "igw" {
   source = "git::https://github.com/mura651/remote-module-test.git//modules/internetgateway?ref=main"
-  name       = "${module.common.pj}-${var.env}-igw"
-  vpc_id = module.vpc.vpc_id
+  name   = "${module.common.pj}-${var.env}-igw"
+  vpc_id = module.my_vpc.vpc_id
 }

@@ -1,7 +1,7 @@
 variable "env" {
-    type = string
+  type = string
 }
 
 variable "cidr" {
-    type = string
+  type = string
 }
