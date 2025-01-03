@@ -1,2 +1,6 @@
-variable "cidr_block" {}
-variable "name" {}
+variable "cidr_block" {
+    type = string
+}
+variable "name" {
+    type = string
+}
