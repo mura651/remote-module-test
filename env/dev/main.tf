@@ -16,5 +16,4 @@ module "vpc" {
 module "igw" {
   source = "git::https://github.com/mura651/remote-module-test.git//modules/internetgateway?ref=main"
   name   = "${module.common.pj}-${var.env}-igw"
-  vpc_id = module.vpc.vpc_id
 }
