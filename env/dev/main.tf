@@ -3,7 +3,7 @@ module "common" {
 }
 
 #vpc
-module "my_vpc" {
+module "vpc" {
   # リモートリポジトリ内のモジュールを参照 (remote-module-test)
   # /modules/vpc を指定し、必要に応じてタグ(ref)も指定
   source = "git::https://github.com/mura651/remote-module-test.git//modules/vpc?ref=main"
