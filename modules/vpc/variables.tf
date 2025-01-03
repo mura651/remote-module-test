@@ -10,4 +10,5 @@ variable "name" {
 
 variable "vpc_id" {
   type = string
+  description = "VPC ID to attach the internet gateway"
 }
