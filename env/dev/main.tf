@@ -1,5 +1,5 @@
 module "common" {
-  source = "../common"
+ source = "git::https://github.com/mura651/remote-module-test.git//env/common"
 }
 
 module "my_vpc" {
