@@ -7,3 +7,7 @@ variable "name" {
   type        = string
   description = "Name tag for the VPC"
 }
+
+variable "vpc_id" {
+  type = string
+}
