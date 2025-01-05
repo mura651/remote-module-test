@@ -3,7 +3,14 @@ variable "cidr" {
   default = "10.0.0.0/16"
 }
 
-variable "env_name" {
+variable "env" {
   type    = string
   default = "dev"
+}
+
+variable "system" {
+  type = string
+  default = "rsv"  
+  
+  
 }

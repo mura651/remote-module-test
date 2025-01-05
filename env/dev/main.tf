@@ -2,7 +2,7 @@
 module "vpc" {
   source     = "git::https://github.com/mura651/remote-module-test.git//modules/vpc?ref=main"
   cidr_block = var.cidr
-  name       = "${var.env_name}-vpc"
+  name       = "${var.system}-${var.env}-vpc"
 }
 
 #module "subnet" {
@@ -13,6 +13,7 @@ module "vpc" {
 #
 #}
 
-output "vpc_id" {
+module "igw" {
+  source = "git::https://github.com/mura651/remote-module-test.git//igw/subnet?ref=main"
   value = module.vpc.vpc_id
 }
