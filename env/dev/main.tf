@@ -14,6 +14,7 @@ module "vpc" {
 #}
 
 module "igw" {
-  source = "git::https://github.com/mura651/remote-module-test.git//igw/subnet?ref=main"
-  value = module.vpc.vpc_id
+  source = "git::https://github.com/mura651/remote-module-test.git//modules/igw/?ref=main"
+  vpc_id = module.vpc.vpc_id
+  name       = "${var.system}-${var.env}-igw"
 }
