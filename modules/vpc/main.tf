@@ -1,8 +1,9 @@
 #VPC
-resource "aws_vpc" "vpc" {
-#  name = "${module.common.pj}-${var.env}-vpc"
-#  cidr_block           = var.cidr_block
+resource "aws_vpc" "this" {
   enable_dns_support   = true
   enable_dns_hostnames = true
-  cidr_block = var.cidr
+
+  tags = {
+    Name = var.name
+  }
 }

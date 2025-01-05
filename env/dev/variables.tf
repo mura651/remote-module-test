@@ -1,7 +1,9 @@
-variable "env" {
-  type = string
+variable "cidr" {
+  type    = string
+  default = "10.0.0.0/16"
 }
 
-variable "cidr" {
-  type = string
+variable "env_name" {
+  type    = string
+  default = "dev"
 }
