@@ -8,10 +8,3 @@ resource "aws_vpc" "vpc" {
     Name = var.name
   }
 }
-
-#InternetGateway
-resource "aws_internet_gateway" "igw" {
-  tags = {
-    Name = var.name
-  }
-}

@@ -1,6 +1,7 @@
 #VPC
 module "vpc" {
   source = "git::https://github.com/mura651/remote-module-test.git//modules/vpc?ref=main"
+  env = var.env
   cidr_block = var.cidr
-  name       = "${var.pj}-${var.env}-vpc"
+  name = "{$var.env}-vpc"
 }
